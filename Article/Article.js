@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Harry Potter and the chamber of Secrets',
+    date: 'Jan 1st, 2009',
+    firstParagraph: `The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, `,
+
+    secondParagraph: `Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, `,
+
+    thirdParagraph: `The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. `
   }
 ];
 
@@ -112,3 +121,40 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function articleMaker(articleContent){
+
+  const [articleDiv, h2, p, p1, p2, p3, span] = ['div','h2','p','p','p','p','span']
+  .map(element => document.createElement(element));
+
+  articleDiv.classList.add('article');
+  p.classList.add('date');
+  span.classList.add('expandButton');
+
+  h2.textContent = articleContent.title;
+  p.textContent = articleContent.date;
+  p1.textContent = articleContent.firstParagraph;
+  p2.textContent = articleContent.secondParagraph;
+  p3.textContent = articleContent.thirdParagraph;
+  span.textContent = "Expand";
+
+  span.addEventListener('click', () => {
+    articleDiv.classList.toggle('article-open');
+  })
+
+  // [h2, p, p1, p2, p3, span].forEach(element => articleDiv.appendChild(element))
+  articleDiv.appendChild(h2);
+  articleDiv.appendChild(p);
+  articleDiv.appendChild(p1);
+  articleDiv.appendChild(p2);
+  articleDiv.appendChild(p3);
+  articleDiv.appendChild(span);
+
+  return articleDiv;
+}
+
+htmlArticles = document.querySelector('.articles');
+
+const articles = data.map(content => {
+  htmlArticles.appendChild(articleMaker(content))
+});
