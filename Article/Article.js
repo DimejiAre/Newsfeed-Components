@@ -87,11 +87,20 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
   {
-    title: 'Harry Potter and the chamber of Secrets',
-    date: 'Jan 1st, 2009',
-    firstParagraph: `The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, The boy who lived, `,
+    title: 'Node.js',
+    date: 'Dec 1st, 2019',
+    firstParagraph: `console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), console.log(), `,
 
-    secondParagraph: `Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, Magic spells, `,
+    secondParagraph: `npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, npm install, `,
+
+    thirdParagraph: `The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. `
+  },
+  {
+    title: 'Data Structures',
+    date: 'Dec 1st, 2019',
+    firstParagraph: `Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, Learn Python, `,
+
+    secondParagraph: `Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, Sorting Algorithms, `,
 
     thirdParagraph: `The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. The end. `
   }
