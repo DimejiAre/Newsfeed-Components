@@ -133,12 +133,13 @@ const data = [
 
 function articleMaker(articleContent){
 
-  const [articleDiv, h2, p, p1, p2, p3, span] = ['div','h2','p','p','p','p','span']
+  const [articleDiv, h2, p, p1, p2, p3, span, button] = ['div','h2','p','p','p','p','span','button']
   .map(element => document.createElement(element));
 
   articleDiv.classList.add('article');
   p.classList.add('date');
   span.classList.add('expandButton');
+  button.classList.add('close')
 
   h2.textContent = articleContent.title;
   p.textContent = articleContent.date;
@@ -146,9 +147,14 @@ function articleMaker(articleContent){
   p2.textContent = articleContent.secondParagraph;
   p3.textContent = articleContent.thirdParagraph;
   span.textContent = "Expand";
+  button.textContent = "Close";
 
   span.addEventListener('click', () => {
     articleDiv.classList.toggle('article-open');
+  })
+
+  button.addEventListener('click', () => {
+    articleDiv.classList.toggle('disappear');
   })
 
   // [h2, p, p1, p2, p3, span].forEach(element => articleDiv.appendChild(element))
@@ -158,6 +164,7 @@ function articleMaker(articleContent){
   articleDiv.appendChild(p2);
   articleDiv.appendChild(p3);
   articleDiv.appendChild(span);
+  articleDiv.appendChild(button);
 
   return articleDiv;
 }
