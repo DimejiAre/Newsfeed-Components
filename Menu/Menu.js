@@ -48,11 +48,20 @@ function menuCreator(data) {
   menuDiv.appendChild(ul)
 
   const menuButton = document.querySelector('.menu-button')
+
   menuButton.addEventListener('click', () => {
-    menuDiv.classList.toggle('menu--open');
-  })
+    if (slide.reversed()) {
+      slide.play();
+    } else {
+      slide.reverse();
+    }
+  });
 
   return menuDiv
 }
 
+
+
 document.querySelector('.menu-button').insertAdjacentElement('afterend', menuCreator(menuItems))
+
+let slide = TweenMax.to('.menu', .333, { left: 0 }).reverse();
