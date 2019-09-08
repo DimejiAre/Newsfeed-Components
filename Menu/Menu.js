@@ -33,3 +33,35 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+function menuCreator(data) {
+  const [menuDiv, ul] = ['div', 'ul'].map(element => document.createElement(element));
+
+  menuDiv.classList.add('menu')
+
+  data.forEach(element => {
+    const li = document.createElement('li');
+    li.textContent = element;
+    ul.appendChild(li)
+  })
+
+  menuDiv.appendChild(ul)
+
+  const menuButton = document.querySelector('.menu-button')
+
+  menuButton.addEventListener('click', () => {
+    if (slide.reversed()) {
+      slide.play();
+    } else {
+      slide.reverse();
+    }
+  });
+
+  return menuDiv
+}
+
+
+
+document.querySelector('.menu-button').insertAdjacentElement('afterend', menuCreator(menuItems))
+
+let slide = TweenMax.to('.menu', .333, { left: 0 }).reverse();
